@@ -1,0 +1,25 @@
+[project]
+name = "pb_plot_web"
+dynamic = ["version"]
+dependencies = [
+    "pb-analyzer",
+    "Flask~=2.2.3"
+]
+requires-python = ">=3.9"
+
+[project.scripts]
+pb_plot_web = "pb_plot_web.__main__:main"
+
+[tool.pdm.version]
+source = "scm"
+write_to = "pb_plot_web/__version__.py"
+write_template = "__version__ = '{}'"  # optional, default to "{}"
+
+[[tool.pdm.source]]
+url = "https://test.pypi.org/simple"
+verify_ssl = true
+name = "testpypi"
+
+[build-system]
+requires = ["pdm-pep517>=1.0.0"]
+build-backend = "pdm.pep517.api"

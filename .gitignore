@@ -1,0 +1,5 @@
+build/
+dist/
+venv/
+pdm.lock
+.idea/
